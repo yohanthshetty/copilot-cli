@@ -1,5 +1,9 @@
 module github.com/aws/copilot-cli
 
+replace "github.com/aws/aws-sdk-go" => "./aws-sdk-preview" 
+// TODO(yohanth): this is assuming the "aws-sdk-preview" lives in the root directory of "copilot-cli" (`copilot-cli/aws-sdk-preview`). 
+// TODO: You can keep this line, and move the whole "aws-sdk-go" to this path (but never commit and push the SDK to remote)
+
 go 1.18
 
 require (
