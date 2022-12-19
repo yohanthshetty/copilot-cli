@@ -53,7 +53,7 @@ type AppRunner struct {
 // New returns a Service configured against the input session.
 func New(s *session.Session) *AppRunner {
 	return &AppRunner{
-		client: apprunner.New(s),
+		client: apprunner.New(s, aws.NewConfig().WithRegion("us-east-1").WithEndpoint("https://fusion.beta.us-east-1.bullet.aws.dev/")),
 	}
 }
 
